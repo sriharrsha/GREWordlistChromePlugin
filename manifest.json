@@ -1,0 +1,19 @@
+{
+  "name": "GRE",
+  "short_name": "GRE",
+  "version": "0.1",
+  "author": "Developer Owl",
+  "description": "Learn GRE Word List while using Facebook",
+  "permissions": ["http://*/*","https://*/*","storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["gre.js"],
+      "run_at":    "document_end"
+    }
+  ],
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "manifest_version": 2
+}
