@@ -9,29 +9,24 @@ strVar += "      <div><\/div>";
 strVar += "      <div class=\"userContentWrapper _5pcr\" role=\"article\" aria-label=\"Story\">";
 strVar += "         <div class=\"_1dwg\">";
 strVar += "            <div class=\"_4r_y\">";
-strVar += "               <div class=\"_6a uiPopover _5pbi _cmw _5v56 _b1e\" id=\"options\"><a class=\"_4xev _p\" href=\"#gre dropdown\" role=\"button\"><\/a><\/div>";
+strVar += "               <div class=\"_6a uiPopover _5pbi _cmw _5v56 _b1e\" style=\"display:none;\" id=\"options\"><a class=\"_4xev _p\" href=\"#gre dropdown\" role=\"button\"><\/a><\/div>";
 strVar += "            <\/div>";
 strVar += "            <div class=\"_4gns accessible_elem\"><\/div>";
 strVar += "            <div class=\"_5x46\">";
 strVar += "               <div class=\"clearfix _5va3\">";
 strVar += "                  <a class=\"_5pb8 _8o _8s lfloat _ohe\" href=\"https:\/\/www.facebook.com\/gre\" aria-hidden=\"true\" tabindex=\"-1\">";
-strVar += "                     <div class=\"_38vo\"><img class=\"_s0 _5xib _5sq7 _44ma _rw img\" src=\"########### gre image url##########\" alt=\"\"><\/div>";
+strVar += "                     <div class=\"_38vo\"><img class=\"_s0 _5xib _5sq7 _44ma _rw img\" src=\"https:\/\/scontent-dfw1-1.xx.fbcdn.net\/hprofile-xfa1\/v\/t1.0-1\/c2.0.50.50\/p50x50\/12439054_182280618819477_3993340226920523436_n.png?oh=92d5a4c40bc4f997dd4fee9e17710725&oe=578789E2\" alt=\"\"><\/div>";
 strVar += "                  <\/a>";
 strVar += "                  <div class=\"clearfix _42ef\">";
 strVar += "                     <div class=\"rfloat _ohf\"><\/div>";
 strVar += "                     <div class=\"_5va4\">";
 strVar += "                        <div>";
 strVar += "                           <div class=\"_6a _5u5j\">";
-strVar += "                              <div class=\"_6a _6b\" style=\"height:40px\"><\/div>";
 strVar += "                              <div class=\"_6a _5u5j _6b\">";
-strVar += "                                 <h5 class=\"_5pbw\"><span class=\"fwn fcg\"><span class=\"fwb fcg\"><a href=\"#\" data-hovercard=\"#\">G R E<\/a><\/span><\/span><\/h5>";
+strVar += "                                 <h5 class=\"_5pbw\"><span class=\"fwn fcg\"><span class=\"fwb fcg\"><a href=\"#\" data-hovercard=\"#\">GREword<\/a><\/span><\/span><\/h5>";
 strVar += "                                 <div class=\"\">";
 strVar += "                                    <div class=\"_5pcp\">";
-strVar += "                                       <span><span class=\"fsm fwn fcg\"><a class=\"_5pcq\" href=\"\/nathrocking\/posts\/981793191911990\" target=\"\"><abbr title=\"Monday, March 14, 2016 at 4:48am\" data-utime=\"1457948932\" data-shorten=\"1\" class=\"_5ptz timestamp livetimestamp\"><span class=\"timestampContent\" id=\"js_2l\">21 mins<\/span><\/abbr><\/a><\/span><\/span><span role=\"presentation\" aria-hidden=\"true\"> · <\/span>";
-strVar += "                                       <div class=\"_6a _43_1 _4f-9 _nws\" id=\"u_1e_4\">";
-strVar += "                                          <div class=\"_6a uiPopover\" id=\"u_1e_5\"><a data-hover=\"tooltip\" data-tooltip-content=\"Only Me\" data-tooltip-alignh=\"right\" class=\"_42ft _4jy0 _55pi _5vto _55_p _2agf _p _1zg8 _4jy3 _517h _51sy _59pe _nl\" role=\"button\" href=\"#\" style=\"max-width:26px;\" rel=\"toggle\" id=\"js_36\" aria-owns=\"u_1u_0\" aria-haspopup=\"true\"><span class=\"_55pe\" style=\"max-width:12px;\"><i class=\"mrs img sp_Pps15gzBQlg sx_a95765\"><\/i><\/span><i class=\"_3-99 img sp_qZv1gJKroOp sx_801235\"><\/i><\/a><\/div>";
-strVar += "                                          <input type=\"hidden\" autocomplete=\"off\" name=\"privacyx\" value=\"286958161406148\" id=\"u_1e_7\">";
-strVar += "                                       <\/div>";
+strVar += "                                       <span><span class=\"fsm fwn fcg\"><a class=\"_5pcq\" href=\"\/nathrocking\/posts\/981793191911990\" target=\"\"><abbr title=\"Monday, March 14, 2016 at 4:48am\" data-utime=\"1457948932\" data-shorten=\"1\" class=\"_5ptz timestamp livetimestamp\"><span class=\"timestampContent\" id=\"js_2l\">21 mins<\/span><\/abbr><\/a><\/span><\/span>";
 strVar += "                                    <\/div>";
 strVar += "                                 <\/div>";
 strVar += "                              <\/div>";
@@ -42,7 +37,7 @@ strVar += "                  <\/div>";
 strVar += "               <\/div>";
 strVar += "            <\/div>";
 strVar += "            <div class=\"_5pbx userContent\">";
-strVar += "               <p>word: description<\/p>";
+strVar += "               <center><p>GREdescription<\/p><\/center>";
 strVar += "            <\/div>";
 strVar += "         <\/div>";
 strVar += "         <div>";
@@ -79,10 +74,57 @@ function readUrl(){
 	return url;
 }
 
+function random333(){
+	return Math.floor(Math.random()* 333);
+}
+
 function facebookGre(){
+
    // alert(data.list[130].word+"\n"+data.list[130].definition);
-    document.getElementsByClassName("_5pcb").item(0).style.display="none";
-    document.getElementById("stream_pagelet").innerHTML+="<div id='grecard'>"+strVar+"</div>";
+    //document.getElementsByClassName("_5pcb").item(0).style.display="none";
+
+		var w1 = random333();
+		var w2 = random333();
+		var w3 = random333();
+
+		while(true)
+		{
+				if(w1 != w2){
+					break;
+				}
+				else{
+					w2 = random333();
+				}
+		}
+
+		while(true)
+		{
+				if(w1 != w3 || w1 != w3 ){
+					break;
+				}
+				else{
+					w3 = random333();
+				}
+		}
+
+		//alert(w1+"\t"+w2+"\t"+w3);
+
+		var word1 = strVar;
+		var word2 = strVar;
+		var word3 = strVar;
+
+		word1 = word1.replace("GREword", data.list[w1].word.charAt(0).toUpperCase() + data.list[w1].word.slice(1));
+		word2 = word2.replace("GREword", data.list[w2].word.charAt(0).toUpperCase() + data.list[w2].word.slice(1));
+		word3 = word3.replace("GREword", data.list[w3].word.charAt(0).toUpperCase() + data.list[w3].word.slice(1));
+
+		word1 = word1.replace("GREdescription", data.list[w1].definition.charAt(0).toUpperCase() + data.list[w1].definition.slice(1)+'.');
+		word2 = word2.replace("GREdescription", data.list[w2].definition.charAt(0).toUpperCase() + data.list[w2].definition.slice(1)+'.');
+		word3 = word3.replace("GREdescription", data.list[w3].definition.charAt(0).toUpperCase() + data.list[w3].definition.slice(1)+'.');
+
+		//alert(word1);
+
+		//document.getElementsByClassName("_5pcb").item(0).innerHTML="";
+    document.getElementById("pagelet_composer").innerHTML+="<div id='grecard'>"+word1+word2+word3+"</div>";
 
 }
 
