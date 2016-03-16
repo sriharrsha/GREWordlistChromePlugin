@@ -26,7 +26,7 @@ strVar += "                              <div class=\"_6a _5u5j _6b\">";
 strVar += "                                 <h5 class=\"_5pbw\"><span class=\"fwn fcg\"><span class=\"fwb fcg\"><a href=\"#\" data-hovercard=\"#\">GREword<\/a><\/span><\/span><\/h5>";
 strVar += "                                 <div class=\"\">";
 strVar += "                                    <div class=\"_5pcp\">";
-strVar += "                                       <span><span class=\"fsm fwn fcg\"><abbr title=\"Monday, March 14, 2016 at 4:48am\" data-utime=\"1457948932\" data-shorten=\"1\" class=\"_5ptz timestamp livetimestamp\"><span style=\"color:black;font-size:14px;\" class=\"timestampContent\" id=\"js_2l\">GREdescription<\/span><\/abbr><\/span><\/span>";
+strVar += "                                       <span><span class=\"fsm fwn fcg\"><a class=\"_5pcq\" href=\"\" target=\"\"><abbr title=\"Monday, March 14, 2016 at 4:48am\" data-utime=\"1457948932\" data-shorten=\"1\" class=\"_5ptz timestamp livetimestamp\"><span class=\"timestampContent\" id=\"js_2l\">Just now<\/span><\/abbr><\/a><\/span><\/span>";
 strVar += "                                    <\/div>";
 strVar += "                                 <\/div>";
 strVar += "                              <\/div>";
@@ -34,6 +34,33 @@ strVar += "                           <\/div>";
 strVar += "                        <\/div>";
 strVar += "                     <\/div>";
 strVar += "                  <\/div>";
+strVar += "               <\/div>";
+strVar += "            <\/div>";
+strVar += "            <div class=\"_5pbx userContent\">";
+strVar += "               <center><p>GREdescription<\/p><\/center>";
+strVar += "            <\/div>";
+strVar += "         <\/div>";
+strVar += "         <div>";
+strVar += "            <div class=\"_sa_ _5vsi _ca7\">";
+strVar += "               <div class=\"_37uu\">";
+strVar += "                  <div data-reactroot=\"\">";
+strVar += "                     <div class=\"_3399 _a7s\">";
+strVar += "                        <div class=\"_524d\">";
+strVar += "                           <div class=\"_42nr\">";
+strVar += "                              <span>";
+strVar += "                                 <div class=\"_khz\"><a aria-pressed=\"false\" class=\"UFILikeLink _4x9- _4x9_ _48-k\" data-testid=\"gre like\" href=\"gre like#\" role=\"button\" tabindex=\"0\"><span>Like<\/span><\/a><\/div>";
+strVar += "                              <\/span>";
+strVar += "                              <span><a class=\"comment_link _5yxe\" role=\"button\" href=\"gre comment#\" title=\"gre comment\">Comment<\/a><\/span>";
+strVar += "                           <\/div>";
+strVar += "                        <\/div>";
+strVar += "                     <\/div>";
+strVar += "                  <\/div>";
+strVar += "               <\/div>";
+strVar += "            <\/div>";
+strVar += "            <div class=\"uiUfi UFIContainer _5pc9 _5vsj _5v9k\" id=\"u_1e_a\">";
+strVar += "               <div data-reactroot=\"\" class=\"UFIList\">";
+strVar += "                  <h6 class=\"accessible_elem\">Comments<\/h6>";
+strVar += "                  <div><\/div>";
 strVar += "               <\/div>";
 strVar += "            <\/div>";
 strVar += "         <\/div>";
@@ -97,7 +124,6 @@ function facebookGre(){
 
 		//document.getElementsByClassName("_5pcb").item(0).innerHTML="";
     document.getElementById("pagelet_composer").innerHTML+="<div id=\"grecard\">"+word1+"</div>";
-		greAdd();
 
 }
 
@@ -107,11 +133,5 @@ function gre(){
 			facebookGre();
 		}
 }
-
-function greAdd(){
-	var div = document.getElementsByClassName("_4ikz").length;
-	alert(div);
-}
-
 
 gre();
