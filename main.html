@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>New Tab</title>
+    <script src="newtab.js"></script>
+    <style>
+    @font-face {
+      font-family: myFont;
+      src: url(FlexDisplay-Thin.otf);
+      }
+      body {
+        background: white;
+        color:black;
+        line-height: 1.2;
+        font-family: myFont;
+      }
+      #container{
+        position:relative;
+        height:100%;
+      }
+      h1{
+        margin: 0;
+        font-size: calc(4vw + 4vh + 2vmin);
+        color:#d35400;
+      }
+      p {
+        margin: 0;
+        font-size: calc(2vw + 2vh + 1vmin);
+        color:#2980b9;
+      }
+    </style>
+  </head>
+  <body >
+    <center>
+      <div id="container" style="height:100%;width:100%">
+        <div id="main" style="position:relative;top:30%;">
+          <h1 id="word">Word</h1>
+          <p id="description" >Description</p>
+        </div>
+      </div>
+    </center>
+
+  </body>
+</html>
