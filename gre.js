@@ -92,14 +92,17 @@ function greAdd(){
 
 var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-    greAdd();
+        var site = readUrl();
+        if(site.includes("www.facebook.com")){
+           greAdd();
+        }
     });
 });
 
 var observerConfig = {
-    attributes: true,
+    attributes: false,
     childList: true,
-    characterData: true
+    characterData: false
 };
 
 var targetNode = document.body;
