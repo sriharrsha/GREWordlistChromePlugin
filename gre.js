@@ -3,7 +3,7 @@ var data={"list":[{"word":"abate","definition":"become less in amount or intensi
 
 
 var strVar="";
-strVar += "<div class=\"_4-u2 mbm _5jmm _5pat _5v3q _4-u8\" style=\"opacity: 1;\" data-insertion-position=\"0\">";
+strVar += "<div class=\"_4-u2 mbm _5jmm _5pat _5v3q _4-u8\" style=\"opacity: 1;border-color:black;\" data-insertion-position=\"0\">";
 strVar += "   <div class=\"_3ccb\">";
 strVar += "      <div><\/div>";
 strVar += "      <div class=\"userContentWrapper _5pcr\" role=\"article\" aria-label=\"Story\">";
@@ -52,52 +52,11 @@ function random333(){
 }
 
 function facebookGre(){
-
-   // alert(data.list[130].word+"\n"+data.list[130].definition);
-    //document.getElementsByClassName("_5pcb").item(0).style.display="none";
-
 		var w1 = random333();
-/*
-		var w2 = random333();
-		var w3 = random333();
-
-		while(true)
-		{
-				if(w1 != w2){
-					break;
-				}
-				else{
-					w2 = random333();
-				}
-		}
-
-		while(true)
-		{
-				if(w1 != w3 || w1 != w3 ){
-					break;
-				}
-				else{
-					w3 = random333();
-				}
-		}
-
-*/
 		var word1 = strVar;
-//		var word2 = strVar;
-//		var word3 = strVar;
-
 		word1 = word1.replace("GREword", data.list[w1].word.charAt(0).toUpperCase() + data.list[w1].word.slice(1));
-//		word2 = word2.replace("GREword", data.list[w2].word.charAt(0).toUpperCase() + data.list[w2].word.slice(1));
-//		word3 = word3.replace("GREword", data.list[w3].word.charAt(0).toUpperCase() + data.list[w3].word.slice(1));
-
 		word1 = word1.replace("GREdescription", data.list[w1].definition.charAt(0).toUpperCase() + data.list[w1].definition.slice(1)+'.');
-//		word2 = word2.replace("GREdescription", data.list[w2].definition.charAt(0).toUpperCase() + data.list[w2].definition.slice(1)+'.');
-//		word3 = word3.replace("GREdescription", data.list[w3].definition.charAt(0).toUpperCase() + data.list[w3].definition.slice(1)+'.');
-
-
-		//document.getElementsByClassName("_5pcb").item(0).innerHTML="";
     document.getElementById("pagelet_composer").innerHTML+="<div id=\"grecard\">"+word1+"</div>";
-		greAdd();
 
 }
 
@@ -107,32 +66,41 @@ function gre(){
 			facebookGre();
 		}
 }
+gre();
+
+
+
+
+var id = 0;
+var count = 0;
 
 function greAdd(){
 	var div = document.getElementsByClassName("_4ikz").length;
-	alert(div);
+	if(id < div - 1)
+	{
+		id+=1;
+		var w = random333();
+		var word = strVar;
+		word = word.replace("GREword", data.list[w].word.charAt(0).toUpperCase() + data.list[w].word.slice(1));
+		word = word.replace("GREdescription", data.list[w].definition.charAt(0).toUpperCase() + data.list[w].definition.slice(1)+'.');
+		var newPre = document.createElement('div');
+    newPre.innerHTML = word;
+    document.getElementsByClassName("_4ikz")[div-1].parentNode.insertBefore(newPre, document.getElementsByClassName("_4ikz")[div-1].nextSibling);
+	}
 }
 
+
 var observer = new MutationObserver(function(mutations) {
-    // For the sake of...observation...let's output the mutation to console to see how this all works
     mutations.forEach(function(mutation) {
-        console.log(mutation.type);
-        alert(mutation.type);
+    greAdd();
     });
 });
 
-// Notify me of everything!
 var observerConfig = {
     attributes: true,
     childList: true,
     characterData: true
 };
 
-// Node, config
-// In this case we'll listen to all changes to body and child nodes
 var targetNode = document.body;
 observer.observe(targetNode, observerConfig);
-
-
-
-gre();
