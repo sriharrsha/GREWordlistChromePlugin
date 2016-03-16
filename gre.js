@@ -3,7 +3,7 @@ var data={"list":[{"word":"abate","definition":"become less in amount or intensi
 
 
 var strVar="";
-strVar += "<div class=\"_4-u2 mbm _5jmm _5pat _5v3q _4-u8\" style=\"opacity: 1;border-color:black;\" data-insertion-position=\"0\">";
+strVar += "<div class=\"_4-u2 mbm _5jmm _5pat _5v3q _4-u8\" style=\"opacity: 1;\" data-insertion-position=\"0\">";
 strVar += "   <div class=\"_3ccb\">";
 strVar += "      <div><\/div>";
 strVar += "      <div class=\"userContentWrapper _5pcr\" role=\"article\" aria-label=\"Story\">";
@@ -15,7 +15,8 @@ strVar += "            <div class=\"_4gns accessible_elem\"><\/div>";
 strVar += "            <div class=\"_5x46\">";
 strVar += "               <div class=\"clearfix _5va3\">";
 strVar += "                  <a class=\"_5pb8 _8o _8s lfloat _ohe\" href=\"https:\/\/www.facebook.com\/gre\" aria-hidden=\"true\" tabindex=\"-1\">";
-strVar += "                     <div class=\"_38vo\"><img class=\"_s0 _5xib _5sq7 _44ma _rw img\" src=\"https:\/\/scontent-dfw1-1.xx.fbcdn.net\/hprofile-xfp1\/v\/t1.0-1\/c2.0.50.50\/p50x50\/12871441_183014105412795_3988951632994744957_n.png?oh=3c41f8d9afc2ae48cff207acb1f59b09&oe=5755775C\" alt=\"\"><\/div>";
+//strVar += "                     <div class=\"_38vo\"><img class=\"_s0 _5xib _5sq7 _44ma _rw img\" src=\"https:\/\/scontent-dfw1-1.xx.fbcdn.net\/hprofile-xfp1\/v\/t1.0-1\/c2.0.50.50\/p50x50\/12871441_183014105412795_3988951632994744957_n.png?oh=3c41f8d9afc2ae48cff207acb1f59b09&oe=5755775C\" alt=\"\"><\/div>";
+strVar += "                     <div class=\"_38vo\"><img class=\"_s0 _5xib _5sq7 _44ma _rw img\" src=\"https:\/\/scontent-dfw1-1.xx.fbcdn.net\/hprofile-xap1\/v\/t1.0-1\/c2.0.40.40\/p40x40\/10299084_183257182055154_7306593269035121981_n.png?oh=c39ec04ec91903e0c78d29c536cfa9bb&oe=575746BB\" alt=\"\"><\/div>";
 strVar += "                  <\/a>";
 strVar += "                  <div class=\"clearfix _42ef\">";
 strVar += "                     <div class=\"rfloat _ohf\"><\/div>";
@@ -60,16 +61,6 @@ function facebookGre(){
 
 }
 
-function gre(){
-		var site = readUrl();
-		if(site.includes("www.facebook.com")){
-			facebookGre();
-		}
-}
-gre();
-
-
-
 
 var id = 0;
 var count = 0;
@@ -86,6 +77,28 @@ function greAdd(){
 		var newPre = document.createElement('div');
     newPre.innerHTML = word;
     document.getElementsByClassName("_4ikz")[div-1].parentNode.insertBefore(newPre, document.getElementsByClassName("_4ikz")[div-1].nextSibling);
+
+
+		var w = random333();
+		var word = strVar;
+		word = word.replace("GREword", data.list[w].word.charAt(0).toUpperCase() + data.list[w].word.slice(1));
+		word = word.replace("GREdescription", data.list[w].definition.charAt(0).toUpperCase() + data.list[w].definition.slice(1)+'.');
+		var newPre = document.createElement('div');
+    newPre.innerHTML = word;
+    document.getElementsByClassName("_4ikz")[div-1].parentNode.insertBefore(newPre, document.getElementsByClassName("_4ikz")[div-1].nextSibling);
+
+
+
+		var w = random333();
+		var word = strVar;
+		word = word.replace("GREword", data.list[w].word.charAt(0).toUpperCase() + data.list[w].word.slice(1));
+		word = word.replace("GREdescription", data.list[w].definition.charAt(0).toUpperCase() + data.list[w].definition.slice(1)+'.');
+		var newPre = document.createElement('div');
+    newPre.innerHTML = word;
+    document.getElementsByClassName("_4ikz")[div-1].parentNode.insertBefore(newPre, document.getElementsByClassName("_4ikz")[div-1].nextSibling);
+
+
+
 	}
 }
 
@@ -107,3 +120,21 @@ var observerConfig = {
 
 var targetNode = document.body;
 observer.observe(targetNode, observerConfig);
+
+
+function gre(){
+		var site = readUrl();
+		if(site.includes("www.facebook.com")){
+			facebookGre();
+		}
+}
+gre();
+function testGre(){
+	var element =  document.getElementById('grecard');
+	if (typeof(element) == 'undefined' || element == null)
+	{
+		gre();
+	}
+}
+
+window.setInterval(testGre, 100);
