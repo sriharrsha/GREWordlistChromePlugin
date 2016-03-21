@@ -14,7 +14,7 @@ strVar += "            <\/div>";
 strVar += "            <div class=\"_4gns accessible_elem\"><\/div>";
 strVar += "            <div class=\"_5x46\">";
 strVar += "               <div class=\"clearfix _5va3\">";
-strVar += "                  <a class=\"_5pb8 _8o _8s lfloat _ohe\" href=\"\" aria-hidden=\"true\" tabindex=\"-1\">";
+strVar += "                  <a class=\"_5pb8 _8o _8s lfloat _ohe\" aria-hidden=\"true\" tabindex=\"-1\">";
 strVar += "                     <div class=\"_38vo\"><img class=\"_s0 _5xib _5sq7 _44ma _rw img\" src=\"https:\/\/scontent-dfw1-1.xx.fbcdn.net\/hprofile-xap1\/v\/t1.0-1\/c2.0.40.40\/p40x40\/10299084_183257182055154_7306593269035121981_n.png?oh=c39ec04ec91903e0c78d29c536cfa9bb&oe=575746BB\" alt=\"\"><\/div>";
 strVar += "                  <\/a>";
 strVar += "                  <div class=\"clearfix _42ef\">";
@@ -26,7 +26,7 @@ strVar += "                              <div class=\"_6a _5u5j _6b\">";
 strVar += "                                 <h5 class=\"_5pbw\"><span class=\"fwn fcg\"><span class=\"fwb fcg\"><a href=\"#\" data-hovercard=\"#\">GREword<\/a><\/span><\/span><\/h5>";
 strVar += "                                 <div class=\"\">";
 strVar += "                                    <div class=\"_5pcp\">";
-strVar += "                                       <span><span class=\"fsm fwn fcg\"><abbr title=\"GRE WordList by Developer Owl\" data-utime=\"1457948932\" data-shorten=\"1\" class=\"_5ptz timestamp livetimestamp\"><span style=\"color:black;font-size:14px;\" class=\"timestampContent\" id=\"js_2l\">GREdescription<\/span><\/abbr><\/span><\/span>";
+strVar += "                                       <span><span class=\"fsm fwn fcg\"><abbr title=\"Monday, March 14, 2016 at 4:48am\" data-utime=\"1457948932\" data-shorten=\"1\" class=\"_5ptz timestamp livetimestamp\"><span style=\"color:black;font-size:14px;\" class=\"timestampContent\" id=\"js_2l\">GREdescription<\/span><\/abbr><\/span><\/span>";
 strVar += "                                    <\/div>";
 strVar += "                                 <\/div>";
 strVar += "                              <\/div>";
@@ -37,15 +37,25 @@ strVar += "                  <\/div>";
 strVar += "               <\/div>";
 strVar += "            <\/div>";
 strVar += "         <\/div>";
+strVar += "			<div>";
+strVar += "			<div class=\"_sa_ _5vsi _ca7\"><div class=\"_37uu\"><div data-reactroot=\"\"><div class=\"_3399 _a7s clearfix\"><div class=\"_524d\"><div class=\"_42nr\"><span><div class=\"_khz\"><a aria-pressed=\"false\" data-testid=\"fb-ufi-likelink\" href=\"#\" role=\"button\" tabindex=\"-1\" class=\"Speak _4x9- _4x9_ _48-k\"><!-- react-text: 8 -->Speak<!-- \/react-text --><\/a><div class=\"_2r6l accessible_elem\"><div class=\"_1oxj uiLayer hidden_elem\" style=\"left: 196px; top: 697px;\"><div class=\"_2pu4 accessible_elem\"><div data-reactroot=\"\" height=\"52\" class=\"_1oxk\"><div class=\"_iu-\" aria-label=\"Reactions\" role=\"toolbar\"><span aria-pressed=\"false\" aria-label=\"Like\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"0\"><div class=\"_39m\" data-reaction=\"1\"><div class=\"_39n\"><i class=\"_3j7l _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Like<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Love\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"2\"><div class=\"_39n\"><i class=\"_3j7m _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Love<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Haha\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"4\"><div class=\"_39n\"><i class=\"_3j7o _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Haha<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Wow\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"3\"><div class=\"_39n\"><i class=\"_3j7n _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Wow<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Sad\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"7\"><div class=\"_39n\"><i class=\"_3j7r _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Sad<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Angry\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"8\"><div class=\"_39n\"><i class=\"_3j7q _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Angry<\/div><\/div><\/div><\/div><\/span><\/div><div class=\"_41nt\" style=\"height: 52px;\"><\/div><\/div><\/div><\/div><\/div><\/div><\/span><\/div><\/div><\/div><\/div><\/div><\/div><\/div>";
 strVar += "      <\/div>";
 strVar += "   <\/div>";
 strVar += "<\/div>";
+
+
+
+
+
+
+
 
 
 function readUrl(){
 	var url = window.location.href;
 	return url;
 }
+
 
 function random333(){
 	return Math.floor(Math.random()* 333);
@@ -137,3 +147,8 @@ function testGre(){
 }
 
 window.setInterval(testGre, 100);
+
+
+
+
+

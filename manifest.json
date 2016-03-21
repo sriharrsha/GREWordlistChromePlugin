@@ -1,15 +1,20 @@
 {
-  "name": "GRE",
-  "short_name": "GRE",
-  "version": "0.1",
+  "name": "GRE Word List",
+  "short_name": "GRE WordList",
+  "version": "0.2",
   "author": "Developer Owl",
-  "description": "Learn GRE Word List while using Facebook",
+  "description": "Learn GRE Word List while using Facebook and other web sites",
   "permissions": ["http://*/*","https://*/*","storage"],
   "content_scripts": [
     {
       "matches": ["*://*/*"],
       "js": ["gre.js"],
       "run_at":    "document_end"
+    },
+    {
+      "matches": ["*://*/*"],
+      "js": ["match.js"],
+      "run_at":    "document_start"
     }
   ],
   "icons": {

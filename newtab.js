@@ -2,9 +2,8 @@ var data={"list":[{"word":"abate","definition":"become less in amount or intensi
 
 
 window.onload =  function newTab(){
-  var strVar = document.getElementById("main").innerHTML;
   var id = Math.floor(Math.random()* 333);
-  var word1 = strVar;
+  var word1 = document.getElementById("main").innerHTML;
   word1 = word1.replace("GREword", data.list[id].word.charAt(0).toUpperCase() + data.list[id].word.slice(1));
   word1 = word1.replace("GREdescription", data.list[id].definition.charAt(0).toUpperCase() + data.list[id].definition.slice(1)+'.');
   document.getElementById("main").innerHTML=word1;
