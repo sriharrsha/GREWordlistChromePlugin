@@ -1,0 +1,21 @@
+{
+  "name": "GRE Word List",
+  "short_name": "GRE WordList",
+  "version": "0.4",
+  "author": "Developer Owl",
+  "description": "Learn GRE Word List",
+  "permissions": ["http://*/*","https://*/*","storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["grePost.js"],
+      "run_at":    "document_end"
+    }
+  ],
+  "icons": {
+          "16": "icon16.png",
+          "48": "icon48.png",
+          "128": "icon128.png"
+  },
+  "manifest_version": 2
+}
