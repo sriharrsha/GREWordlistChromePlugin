@@ -39,7 +39,7 @@ strVar += "            <\/div>";
 strVar += "			   <div class=\"_5pbx userContent\" ><p style=\"color:#3b5998;\"><b><i>GREexample<\/i><\/b><\/p><div class=\"_5wpt\"><\/div><\/div>";
 strVar += "         <\/div>";
 strVar += "			<div>";
-strVar += "			<div class=\"_sa_ _5vsi _ca7\"><div class=\"_37uu\"><div data-reactroot=\"\"><div class=\"_3399 _a7s clearfix\"><div class=\"_524d\"><div class=\"_42nr\"><span><div class=\"_khz\"><a aria-pressed=\"false\" onclick=\"GREfunction\" data-testid=\"fb-ufi-likelink\" href=\"#\" role=\"button\" tabindex=\"-1\" class=\"Speak _4x9- _4x9_\"><i height=\"16\" width=\"16\" draggable=\"false\" alt=\"\" class=\"img sp_Mq9hGfMTxze sx_cb9bdd\"><\/i><!-- react-text: 8 -->Speak<!-- \/react-text --><\/a><div class=\"_2r6l accessible_elem\"><div class=\"_1oxj uiLayer hidden_elem\" style=\"left: 196px; top: 697px;\"><div class=\"_2pu4 accessible_elem\"><div data-reactroot=\"\" height=\"52\" class=\"_1oxk\"><div class=\"_iu-\" aria-label=\"Reactions\" role=\"toolbar\"><span aria-pressed=\"false\" aria-label=\"Like\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"0\"><div class=\"_39m\" data-reaction=\"1\"><div class=\"_39n\"><i class=\"_3j7l _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Like<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Love\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"2\"><div class=\"_39n\"><i class=\"_3j7m _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Love<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Haha\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"4\"><div class=\"_39n\"><i class=\"_3j7o _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Haha<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Wow\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"3\"><div class=\"_39n\"><i class=\"_3j7n _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Wow<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Sad\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"7\"><div class=\"_39n\"><i class=\"_3j7r _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Sad<\/div><\/div><\/div><\/div><\/span><span aria-pressed=\"false\" aria-label=\"Angry\" class=\"_iuw\" href=\"#\" role=\"button\" tabindex=\"-1\"><div class=\"_39m\" data-reaction=\"8\"><div class=\"_39n\"><i class=\"_3j7q _iuz\"><\/i><div class=\"_d6l\"><div class=\"_4sm1\">Angry<\/div><\/div><\/div><\/div><\/span><\/div><div class=\"_41nt\" style=\"height: 52px;\"><\/div><\/div><\/div><\/div><\/div><\/div><\/span><\/div><\/div><\/div><\/div><\/div><\/div><\/div>";
+strVar += "			<div class=\"_sa_ _5vsi _ca7\"><div class=\"_37uu\"><div data-reactroot=\"\"><div class=\"_3399 _a7s clearfix\"><div class=\"_524d\"><div class=\"_42nr\"><span><div class=\"_khz\"><a aria-pressed=\"false\" onclick=\"GREWfunction\" data-testid=\"fb-ufi-likelink\" role=\"button\" tabindex=\"-1\" class=\"Speak _4x9- _4x9_\"><i height=\"16\" width=\"16\" draggable=\"false\" alt=\"\" class=\"img sp_Mq9hGfMTxze sx_cb9bdd\"><\/i><!-- react-text: 8 -->Pronounce<!-- \/react-text --><\/a><\/div><\/span><\/div><\/div><\/div><\/div><\/div><\/div><\/div>";
 strVar += "      <\/div>";
 strVar += "   <\/div>";
 strVar += "<\/div>";
@@ -68,7 +68,7 @@ function facebookGre(){
 		word1 = word1.replace("GREword", data.list[w1].word.charAt(0).toUpperCase() + data.list[w1].word.slice(1));
 		word1 = word1.replace("GREdescription", data.list[w1].meaning.charAt(0).toUpperCase() + data.list[w1].meaning.slice(1)+'.');
 		word1 = word1.replace("GREexample", data.list[w1].example.charAt(0).toUpperCase() + data.list[w1].example.slice(1));
-  		word1 = word1.replace("GREfunction", "greSpeak("+w1+");");
+  		word1 = word1.replace("GREWfunction", "var utterance = new SpeechSynthesisUtterance(); utterance.text = '"+data.list[w1].word+"';  utterance.lang = 'en-US'; utterance.volume = 0.8; utterance.rate = 0.8; window.speechSynthesis.speak(utterance);");
     	document.getElementById("pagelet_composer").innerHTML+="<div id=\"grecard\">"+word1+"</div>";
 
 }
@@ -87,11 +87,24 @@ function greAdd(){
 		word = word.replace("GREword", data.list[w].word.charAt(0).toUpperCase() + data.list[w].word.slice(1));
 		word = word.replace("GREdescription", data.list[w].meaning.charAt(0).toUpperCase() + data.list[w].meaning.slice(1)+'.');
 		word = word.replace("GREexample", data.list[w].example.charAt(0).toUpperCase() + data.list[w].example.slice(1));
-		word = word.replace("GREfunction", "greSpeak("+w+")");
-      
+		word = word.replace("GREWfunction", "var utterance = new SpeechSynthesisUtterance(); utterance.text = '"+data.list[w].word+"'; utterance.lang = 'en-US'; utterance.volume = 0.8; utterance.rate = 0.8; window.speechSynthesis.speak(utterance);");
+    	
 		var newPre = document.createElement('div');
     newPre.innerHTML = word;
     document.getElementsByClassName("_4ikz")[div-1].parentNode.insertBefore(newPre, document.getElementsByClassName("_4ikz")[div-1].nextSibling);
+
+/*
+		var w = random333();
+		var word = strVar;
+		word = word.replace("GREword", data.list[w].word.charAt(0).toUpperCase() + data.list[w].word.slice(1));
+		word = word.replace("GREdescription", data.list[w].meaning.charAt(0).toUpperCase() + data.list[w].meaning.slice(1)+'.');
+		word = word.replace("GREexample", data.list[w].example.charAt(0).toUpperCase() + data.list[w].example.slice(1));
+		word = word.replace("GREWfunction", "var utterance = new SpeechSynthesisUtterance(); utterance.text = '"+data.list[w].word+"'; utterance.lang = 'en-US'; utterance.volume = 0.8; utterance.rate = 0.8; window.speechSynthesis.speak(utterance);");
+    	
+		var newPre = document.createElement('div');
+    newPre.innerHTML = word;
+    document.getElementsByClassName("_4ikz")[div-1].parentNode.insertBefore(newPre, document.getElementsByClassName("_4ikz")[div-1].nextSibling);
+
 
 
 		var w = random333();
@@ -99,26 +112,13 @@ function greAdd(){
 		word = word.replace("GREword", data.list[w].word.charAt(0).toUpperCase() + data.list[w].word.slice(1));
 		word = word.replace("GREdescription", data.list[w].meaning.charAt(0).toUpperCase() + data.list[w].meaning.slice(1)+'.');
 		word = word.replace("GREexample", data.list[w].example.charAt(0).toUpperCase() + data.list[w].example.slice(1));
-		word = word.replace("GREfunction", "greSpeak("+w+")");
-      
+		word = word.replace("GREWfunction", "var utterance = new SpeechSynthesisUtterance(); utterance.text = '"+data.list[w].word+"'; utterance.lang = 'en-US'; utterance.volume = 0.8; utterance.rate = 0.8; window.speechSynthesis.speak(utterance);");
+    	
 		var newPre = document.createElement('div');
     newPre.innerHTML = word;
     document.getElementsByClassName("_4ikz")[div-1].parentNode.insertBefore(newPre, document.getElementsByClassName("_4ikz")[div-1].nextSibling);
 
-
-
-		var w = random333();
-		var word = strVar;
-		word = word.replace("GREword", data.list[w].word.charAt(0).toUpperCase() + data.list[w].word.slice(1));
-		word = word.replace("GREdescription", data.list[w].meaning.charAt(0).toUpperCase() + data.list[w].meaning.slice(1)+'.');
-		word = word.replace("GREexample", data.list[w].example.charAt(0).toUpperCase() + data.list[w].example.slice(1));
-		word = word.replace("GREfunction", "greSpeak("+w+")");
-      
-		var newPre = document.createElement('div');
-    newPre.innerHTML = word;
-    document.getElementsByClassName("_4ikz")[div-1].parentNode.insertBefore(newPre, document.getElementsByClassName("_4ikz")[div-1].nextSibling);
-
-
+*/
 
 	}
 }
@@ -158,12 +158,15 @@ function testGre(){
 	}
 }
 
-function greSpeak(var w){
-	alert(w);
+function greSpeak(){
+	alert("hellox");
 }
 
 window.setInterval(testGre, 100);
 
+
+
+//var utterance = new SpeechSynthesisUtterance(); utterance.text = 'Hello, World!'; utterance.lang = 'en-GB'; utterance.volume = 0.5; utterance.rate = 0.8; window.speechSynthesis.speak(utterance);
 
 
 
